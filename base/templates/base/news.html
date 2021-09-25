@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block newsactive %} {% endblock newsactive %}
+{% block content %}
+
+<section class="blog_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="main_title">
+                    <h2>News</h2>
+                    <h1>News</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% comment %} {% for post in allPosts %} {% endcomment %}
+            <div class="col-lg-4 col-md-6">
+                <div class="blog_items">
+                    <div class="blog_img_box">
+                        <img class="img-fluid" src="{% static 'base/img/blog_img1.png' %}" alt="">
+                    </div> 
+                    <div class="blog_content">
+                       <center> <a class="title" href="/blogpost/{{post.slug}}">Portable Fashion for women</a></center>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+								dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                        {% comment %} <div class="date">
+                            <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>{{post.timeStamp}} </a>
+                            <a href="/blogpost/{{post.slug}}"><i class="fa fa-comments-o" aria-hidden="true"></i> Continue..</a>
+                        </div> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+           {% comment %}  {% endfor %} {% endcomment %}
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

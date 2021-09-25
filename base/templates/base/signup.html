@@ -1,0 +1,54 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+<div class="login-page" style="padding: 8% 30% 0 0 !important;">
+    <center>
+      <div class="form" style="width:480px">
+        
+        <form class="login-form" method= "POST">
+          {% csrf_token %}
+         <div class="row">
+      <div class="column">
+      <input type="firstname" placeholder="First Name" name="first_name"/>
+      <input type="text" placeholder="Username" name="username"/>
+      <input class="side" type="password" placeholder="Password" name="password1"/>
+     
+      
+      </select>
+      </div>  
+      <div class="column">
+      <input class="side" type="lastname" placeholder="Last Name" name="last_name"/>
+      <input type="email" placeholder="Email address" name="email"/>
+      <input class="side" type="password" placeholder="Confirm Password" name="password2"/>
+     {% comment %}  <input type="text" placeholder="Phone No" name="phone"/> {% endcomment %}
+        
+    
+      
+      </div>
+    </div>
+       
+          
+         
+          <button type="submit">Create</button>
+          <p class="message">Already registered? 
+              <a type="submit" href="/login">Sign in</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <div>
+        {% for message in messages %}
+        <center><h3> {{message}} </h3></center>
+        {% endfor %}
+    </div>
+
+
+
+    <!-- <script>
+        '''{% for msg in messages %}
+          swal('{{msg}}');
+        {% endfor %} '''
+      </script> -->
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container my-3" style="padding-top: 100px">
+<div class="blog-post">
+        <h2 class="blog-post-title">{{post.title}}</h2>
+        <p class="blog-post-meta">{{post.timeStamp}} by <a href="#">{{post.author}}</a></p>
+
+        <p>{{post.content}}</p>
+        <hr>
+</div>
+</div>
+
+{% endblock content %}

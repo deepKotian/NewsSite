@@ -1,0 +1,51 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block blogsactive %} {% endblock blogsactive %}
+{% block content %}
+
+<div class="container" style="margin-top:100px">
+<form action="/search/" method="get"> 
+    <div class="row height d-flex justify-content-center align-items-center">
+      
+        <div class="col-md-8">
+            <div class="search" style="font-size:18px"> <i class="fa fa-search"></i> <input type="text" class="form-control" placeholder="Search" name="search" id="search"> <button class="btn btn-primary" type="submit" >Search</button> </div>
+        </div>
+      
+    </div>
+    </form>
+</div>  
+
+ 
+	
+
+<section class="blog_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="main_title">
+                    <h2>Latest Blog Posts</h2>
+                    <h1>Latest Blog Posts</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for post in allPosts %}
+            <div class="col-lg-4 col-md-6">
+                <div class="blog_items">
+                    <div class="blog_content">
+                       <center> <a class="title" href="/blogpost/{{post.slug}}">{{post.title}}</a></center>
+                        <p >{{post.author}}</p>
+                        <p>{{post.content| truncatechars:300 }}</p>
+                        <div class="date">
+                            <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>{{post.timeStamp}} </a>
+                            <a href="/blogpost/{{post.slug}}"><i class="fa fa-comments-o" aria-hidden="true"></i> Continue..</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
