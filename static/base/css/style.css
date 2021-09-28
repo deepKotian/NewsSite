@@ -496,7 +496,7 @@ img {
 ============================================================================================ */
 .home_banner_area {
   z-index: 1;
-  background: url(../img/banner/home-banner.jpg) no-repeat center center;
+  background: url(../img/banner/Finesse.jpg) no-repeat center center;
   background-size: cover; }
   .home_banner_area .banner_inner {
     width: 100%; }
@@ -526,7 +526,7 @@ img {
         text-transform: uppercase; }
 
 .blog_banner {
-  min-height: 780px;
+  min-height: 900px;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -536,10 +536,10 @@ img {
     position: relative;
     overflow: hidden;
     width: 100%;
-    min-height: 780px;
+    min-height: 900px;
     z-index: 1; }
     .blog_banner .banner_inner .overlay, .blog_banner .banner_inner .single-gallery .content, .single-gallery .blog_banner .banner_inner .content {
-      background: url(../img/banner/banner-2.jpg) no-repeat scroll center center;
+      background: url(../img/banner/tp.jfif) no-repeat scroll center center;
       opacity: .5;
       height: 125%;
       position: absolute;
@@ -573,7 +573,7 @@ img {
   position: relative;
   min-height: 430px;
   z-index: 1;
-  background: url(../img/banner/home-banner.jpg) no-repeat center center;
+  background: url(../img/banner/tp.jfif) no-repeat center center;
   background-size: cover; }
   .banner_area .banner_inner {
     position: relative;
@@ -2786,7 +2786,7 @@ h6 {
 /* Start Recent Update Area css
 ============================================================================================ */
 .recent_update_area {
-  background: url(../img/recent_up_bg.png) no-repeat center; }
+  background: url(../img/BG1.jpg) no-repeat center; }
   .recent_update_area.made_white {
     background: #fff; }
 
@@ -2839,7 +2839,7 @@ h6 {
   position: relative;
   z-index: 999; }
   .recent_update_text .chart_img img {
-    height: 100% !important;
+    height: 100% ;
     z-index: 999; }
   .recent_update_text .chart_img:after {
     content: "";

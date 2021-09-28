@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-from base.models import Post
+from base.models import Post, News
 
 def index(request):
     return render(request , 'index.html')
@@ -14,9 +14,6 @@ def home(request):
 
 def about(request):
     return render(request , 'about.html')
-
-def news(request):
-    return render(request , 'news.html')
 
 def tournament(request):
     return render(request , 'tournament.html')
@@ -29,6 +26,12 @@ def blog(request):
     print(allPosts)
     context = {'allPosts': allPosts}
     return render(request , 'blog.html', context)
+
+def news(request):
+    allNews = News.objects.all()
+    print(allNews)
+    context = {'allNews': allNews}
+    return render(request , 'news.html', context)
 
 def merch(request):
     return render(request , 'merch.html')
@@ -44,6 +47,12 @@ def blogpost(request, slug):
     print(post)
     context = {'post': post}
     return render(request , 'blogpost.html', context)
+
+def newspost(request, slug):
+    news = News.objects.filter(slug = slug).first()
+    print(news)
+    context = {'news': news}
+    return render(request , 'newspost.html', context)
 
 def login(request):
     if request.method == 'POST':

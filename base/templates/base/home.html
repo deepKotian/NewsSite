@@ -11,7 +11,7 @@
 
 <body>
 	<!--================Home Banner Area =================-->
-	<section class="home_banner_area">
+	<section class="home_banner_area" style="margin-top:75px">
 		<div class="banner_inner">
 			<div class="container">
 				<div class="row">
@@ -23,13 +23,12 @@
 					<div class="col-lg-6">
 						<div class="banner_content">
 							<h2>
-								For All Occasion <br>
-								HairStyle is a Must <br>
-								Try Fashion
+								Watch One of <br>
+								The Best CODM Player <br>
+								In Action
 							</h2>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp or incididunt ut labore et dolore
-								magna aliqua. Ut enim ad minim.
+								
 							</p>
 							<div class="d-flex align-items-center">
 								<a id="play-home-video" class="video-play-button" href="https://youtu.be/JsK6qOY4u8E">
@@ -49,7 +48,8 @@
 	<!--================End Home Banner Area =================-->
 
 	<!--================Start About Us Area =================-->
-	<section class="about_us_area section_gap_top">
+<
+	{% comment %} <section class="about_us_area section_gap_top" >
 		<div class="container">
 			<div class="row about_content align-items-center">
 				<div class="col-lg-6">
@@ -68,11 +68,11 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> {% endcomment %}
 	<!--================End About Us Area =================-->
 
 	<!--================First Upcoming Games Area =================-->
-	<section class="upcoming_games_area">
+	{% comment %} <section class="upcoming_games_area">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -117,47 +117,48 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> {% endcomment %}
 	<!--================End Upcoming Games Area =================-->
 
 	<!--================Start Recent Update Area =================-->
-	<section class="recent_update_area section_gap">
+	<section class="recent_update_area section_gap" style="margin-top:50px">
 		<div class="container">
 			<div class="recent_update_inner">
 				<ul class="nav nav-tabs" id="myTab" role="tablist">
 					<li class="nav-item">
 						<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
-							Live Streaming
+							Upcoming Tournaments
 						</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
 						 aria-selected="false">
-							Upcoming Challanges
+							Merch Store
 						</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
 						 aria-selected="false">
-							Recent Famous Games
+							ChatRoom
 						</a>
 					</li>
 				</ul>
-				<div class="tab-content" id="myTabContent">
-					<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
-						<div class="row recent_update_text">
+				<div class="tab-content" id="myTabContent" >
+					<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab" >
+						<div class="row recent_update_text" >
 							<div class="col-lg-6">
-								<div class="chart_img">
-									<img class="img-fluid" src="{% static 'base/img/recent_up.png' %}" alt="">
+								<div class="chart_img" >
+									<img class="img-fluid" src="{% static 'base/img/codm.jpg' %}" alt="" >
 								</div>
 							</div>
 							<div class="col-lg-6">
 								<div class="section_content">
-									<h6>About Us</h6>
-									<h1>We Believe that <br>Interior beauty Lasts Long</h1>
-									<p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards
-										especially in the workplace. That’s why it’s crucial that as women.</p>
-									<a class="primary_btn" href="#">Learn More</a>
+									<h6>Upcoming Tournaments</h6>
+									<h1>Be a part of <br>Upcoming Tournaments</h1>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
+									since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
+								    </p>
+									<a class="primary_btn" href="/tournament">Learn More</a>
 								</div>
 							</div>
 						</div>
@@ -166,16 +167,17 @@
 						<div class="row recent_update_text">
 							<div class="col-lg-6">
 								<div class="chart_img">
-									<img class="img-fluid" src="{% static 'base/img/recent_up.png' %}" alt="">
+									<img class="img-fluid" src="{% static 'base/img/shoppingbag.jpg' %}" alt="">
 								</div>
 							</div>
 							<div class="col-lg-6">
 								<div class="section_content">
-									<h6>Yes</h6>
+									<h6>Merch Store</h6>
 									<h1>We Believe that <br>Interior beauty Lasts Long</h1>
-									<p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards
-										especially in the workplace. That’s why it’s crucial that as women.</p>
-									<a class="primary_btn" href="#">Learn More</a>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
+									since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
+								    </p>
+									<a class="primary_btn" href="/merch">Learn More</a>
 								</div>
 							</div>
 						</div>
@@ -184,16 +186,17 @@
 						<div class="row recent_update_text">
 							<div class="col-lg-6">
 								<div class="chart_img">
-									<img class="img-fluid" src="{% static 'base/img/recent_up.png' %}" alt="">
+									<img class="img-fluid" src="{% static 'base/img/chatbot.jpg' %}" alt="">
 								</div>
 							</div>
 							<div class="col-lg-6">
 								<div class="section_content">
-									<h6>About Us</h6>
+									<h6>ChatRoom</h6>
 									<h1>We Believe that <br>Interior beauty Lasts Long</h1>
-									<p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards
-										especially in the workplace. That’s why it’s crucial that as women.</p>
-									<a class="primary_btn" href="#">Learn More</a>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
+									since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
+								    </p>
+									<a class="primary_btn" href="/chatroom">Learn More</a>
 								</div>
 							</div>
 						</div>
@@ -201,12 +204,12 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> 
 	<!--================End Recent Update Area =================-->
 
 
 	<!--================ Start Gallery Area =================-->
-	<section class="gallery_area">
+	{% comment %} <section class="gallery_area">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -267,12 +270,12 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> {% endcomment %}
 	<!--================ End Gallery Area =================-->
 
 
 	<!--========== Start Testimonials Area ==================-->
-	<section class="testimonials_area section_gap">
+	{% comment %} <section class="testimonials_area section_gap">
 		<div class="container">
 			<div class="testi_slider owl-carousel">
 				<div class="testi_item">
@@ -331,12 +334,12 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> {% endcomment %}
 	<!--================ End Testimonials Area ================-->
 
 
 	<!--================ Start Pricing Plans Area ================-->
-	<section class="pricing_area section_gap">
+	{% comment %} <section class="pricing_area section_gap">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -397,12 +400,12 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> {% endcomment %}
 	<!--================ End Pricing Plans Area ================-->
 
 
 	<!--================ Start Frequently Asked Questions Area ================-->
-	<section class="frequently_area">
+	<section class="frequently_area" style="margin-top:50px">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -415,44 +418,38 @@
 			<div class="row frequent_inner">
 				<div class="col-lg-5 col-md-5">
 					<div class="frequent_item">
-						<h3>We Believe that Interior beauty Lasts Long</h3>
-						<p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards
-							especially in the workplace. That’s why it’s crucial that as women.</p>
+						<h3>How Frequently News Gets updated on our site</h3>
+						<p>We update our News after checking the credibility of news received. If we think the news is true then only it gets reflected on our website. We are here to provide you with the correct news. </p>
 					</div>
 				</div>
 				<div class="offset-lg-2 col-lg-5 offset-md-2 col-md-5">
 					<div class="frequent_item">
-						<h3>We Believe that Interior beauty Lasts Long</h3>
-						<p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards
-							especially in the workplace. That’s why it’s crucial that as women.</p>
+						<h3>From where do we get our news</h3>
+						<p>We get all recent news from well known sources as well as content creators who are in contact with us. If you like to share any news feel free to mail the news to us.</p>
 					</div>
 				</div>
 				<div class="col-lg-5 col-md-5">
 					<div class="frequent_item">
-						<h3>We Believe that Interior beauty Lasts Long</h3>
-						<p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards
-							especially in the workplace. That’s why it’s crucial that as women.</p>
+						<h3>How does chatroom work</h3>
+						<p>for using the chatroom user would have to login at our website then only he can use the chatroom feature. After login user can interact/chat with any other user who is online.</p>
 					</div>
 				</div>
 				<div class="offset-lg-2 col-lg-5 offset-md-2 col-md-5">
 					<div class="frequent_item">
-						<h3>We Believe that Interior beauty Lasts Long</h3>
-						<p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards
-							especially in the workplace. That’s why it’s crucial that as women.</p>
+						<h3>How to register for a Tournament</h3>
+						<p>You can access the tournaments by navigating to the tournament page. To access registartion you would have to login at our site then it a simple process just click on the registartion link.</p>
 					</div>
 				</div>
 				<div class="col-lg-5 col-md-5">
 					<div class="frequent_item last-child">
-						<h3>We Believe that Interior beauty Lasts Long</h3>
-						<p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards
-							especially in the workplace. That’s why it’s crucial that as women.</p>
+						<h3>How to Buy Merch</h3>
+						<p>Its very easy to buy a merch just click on your favourite merch add the no of content then on cart click on payment a login screen would pop up login add all your detals then just click on the pay option you now have buyed a merch.  </p>
 					</div>
 				</div>
 				<div class="offset-lg-2 col-lg-5 offset-md-2 col-md-5">
 					<div class="frequent_item last-child">
-						<h3>We Believe that Interior beauty Lasts Long</h3>
-						<p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards
-							especially in the workplace. That’s why it’s crucial that as women.</p>
+						<h3>How can you contact us</h3>
+						<p>you can contact us through our mail, intagram, youtube. feel free to contact us we are always ready to guide you about our website. </p>
 					</div>
 				</div>
 			</div>
@@ -478,7 +475,7 @@
 							<img class="img-fluid" src="img/blog_img1.png" alt="">
 						</div>
 						<div class="blog_content">
-							<a class="title" href="blog.html">Portable Fashion for women</a>
+							<a class="title" href="blog.html">Testing</a>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
 								dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
 							<div class="date">
@@ -495,7 +492,7 @@
 							<img class="img-fluid" src="img/blog_img2.png" alt="">
 						</div>
 						<div class="blog_content">
-							<a class="title" href="blog.html">Portable Fashion for women</a>
+							<a class="title" href="blog.html">Testing2</a>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
 								dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
 							<div class="date">
@@ -512,7 +509,7 @@
 							<img class="img-fluid" src="{% static 'base/img/blog_img3.png' %}" alt="">
 						</div>
 						<div class="blog_content">
-							<a class="title" href="blog.html">Portable Fashion for women</a>
+							<a class="title" href="blog.html">Testing3</a>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
 								dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
 							<div class="date">
@@ -529,7 +526,7 @@
 	<!--================ End Blog Area ================-->
 
 	<!--================ Start Newsletter Area ================-->
-	<section class="newsletter_area">
+{% comment %} 	<section class="newsletter_area">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-12">
@@ -554,7 +551,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> {% endcomment %}
 	<!--================ End Newsletter Area ================-->
 
 	

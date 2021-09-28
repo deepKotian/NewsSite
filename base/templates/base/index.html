@@ -65,7 +65,6 @@
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 						    {% if user.is_authenticated %}
-							
 							<li class="nav-item"><a href="/logout" class="primary_btn">Logout</a></li>
 							{% else %}
 							<li class="nav-item"><a href="/login" class="primary_btn">Login</a></li>
@@ -87,60 +86,60 @@
 				<div class="col-lg-3 col-sm-6">
 					<aside class="f_widget ab_widget">
 						<div class="f_title">
-							<h4>About Farfly</h4>
+							<h4><a href="/about"> About Us </a></h4>
 						</div>
-						<ul>
+						{% comment %} <ul>
 							<li><a href="#"></a>For Business</a></li><a href="#">
 								<li><a href="#"></a>Premium Plans
 							</a></li>
 							<li><a href="#"></a>Reviews</a></li>
 							<li><a href="#"></a>How it Works</a></li>
 							<li><a href="#"></a>Farfly Blog</a></li>
-						</ul>
+						</ul> {% endcomment %}
 					</aside>
 				</div>
 				<div class="col-lg-3 col-sm-6">
 					<aside class="f_widget ab_widget">
 						<div class="f_title">
-							<h4>Company</h4>
+							<h4><a href="/contact" >Contact</a></h4>
 						</div>
-						<ul>
+						{% comment %} <ul>
 							<li><a href="#"></a>Product Tour</a></li><a href="#">
 								<li><a href="#"></a>Pricing
 							</a></li>
 							<li><a href="#"></a>Founding Members</a></li>
 							<li><a href="#"></a>Case Studies</a></li>
 							<li><a href="#"></a>Product Updates</a></li>
-						</ul>
+						</ul> {% endcomment %}
 					</aside>
 				</div>
 				<div class="col-lg-3 col-sm-6">
 					<aside class="f_widget ab_widget">
 						<div class="f_title">
-							<h4>Support</h4>
+							<h4><a href="/news">News</a></h4>
 						</div>
-						<ul>
+						{% comment %} <ul>
 							<li><a href="#"></a>Documentation</a></li><a href="#">
 								<li><a href="#"></a>Data Securiry
 							</a></li>
 							<li><a href="#"></a>Site Performance</a></li>
 							<li><a href="#"></a>Action Plan</a></li>
 							<li><a href="#"></a>Resources</a></li>
-						</ul>
+						</ul> {% endcomment %}
 					</aside>
 				</div>
 				<div class="col-lg-3 col-sm-6">
 					<aside class="f_widget ab_widget">
 						<div class="f_title">
-							<h4>Legal</h4>
+							<h4><a href="/tournament">Tournamnet</a> </h4>
 						</div>
-						<ul>
+						{% comment %} <ul>
 							<li><a href="#"></a>Terms and conditions</a></li><a href="#">
 								<li><a href="#"></a>Privacy Policy
 							</a></li>
 							<li><a href="#"></a>Cookie Information</a></li>
 							<li><a href="#"></a>Opt - Out</a></li>
-						</ul>
+						</ul> {% endcomment %}
 					</aside>
 				</div>
 			</div>

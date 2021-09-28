@@ -12,3 +12,17 @@ class Post(models.Model):
         
         def __str__(self):
                 return 'Message from ' +self.title + ' by ' + self.author
+
+class News(models.Model):
+        sno = models.AutoField(primary_key=True)
+        title = models.CharField(max_length=255)
+        content = models.TextField()
+        author = models.CharField(max_length=255)
+        slug = models.CharField(max_length=200)
+        timeStamp = models.DateTimeField(blank=True)
+        image = models.ImageField(upload_to="images/")
+
+        def __str__(self):
+                return 'News from ' +self.title + ' by ' + self.author
+
+        
