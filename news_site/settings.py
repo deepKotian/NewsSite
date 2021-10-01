@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'base.apps.BaseConfig',
+    'merch'
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'news_site.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["base/templates/base"],
+        'DIRS': ["base/templates/base","merch/templates/merch"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -133,5 +134,5 @@ TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_ROOT = os.path.join(BASE_DIR,"images")
-MEDIA_URL = "images/"
+MEDIA_URL = '/images/'
+MEDIA_ROOT = BASE_DIR

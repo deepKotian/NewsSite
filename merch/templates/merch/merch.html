@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block merchactive %} {% endblock merchactive %}
+{% block content %}
+<section class="blog_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="main_title">
+                    <h2>Merch</h2>
+                    <h1>Merch</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="blog_items">
+                   <div class="blog_img_box">
+                        <img class="img-fluid" src="{% static 'base/img/codm1.jpg' %}" alt="">
+                    </div> 
+                    <div class="blog_content">
+                       <center> <a class="title" href="/newspost/{{news.slug}}">{{news.title}}</a></center>
+                        <center><p>Red Shirt</p></center>
+                        <button type="button" class="btn btn-primary">Primary</button>
+                        {% comment %} <p> ugndnummbf</p>
+                        <div class="date">
+                            <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>{{news.timeStamp}} </a>
+                            <a href="/newspost/{{news.slug}}"><i class="fa fa-comments-o" aria-hidden="true"></i> Continue..</a>
+                        </div> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+</section>
+</div>
+{% endblock content %}

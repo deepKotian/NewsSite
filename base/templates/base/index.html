@@ -48,10 +48,10 @@
 							<!-- <li class="nav-item"><a class="nav-link" href="/about">About</a></li> -->
 							<li class="nav-item {% block newsactive %} {% endblock newsactive %}"><a class="nav-link" href="/news">News</a>
 							<li class="nav-item {% block tournamentactive %} {% endblock tournamentactive %}"><a class="nav-link" href="/tournament">Tournament</a>
-							<li class="nav-item {% block merchactive %} {% endblock merchactive %}"><a class="nav-link" href="/merch">Merch</a>
+							<li class="nav-item {% block merchactive %} {% endblock merchactive %}"><a class="nav-link" href="{% url 'merch' %}">Merch</a>
 							{% if user.is_authenticated %}
 							<li class="nav-item {% block blogsactive %} {% endblock blogsactive %}"><a class="nav-link" href="/blog">Blogs</a>
-							<li class="nav-item {% block chatactive %} {% endblock chatactive %}"><a class="nav-link" href="/merch">ChatRoom</a>
+							<li class="nav-item {% block chatactive %} {% endblock chatactive %}"><a class="nav-link" href="/chatroom">ChatRoom</a>
 							{% endif %}
 							<!-- <li class="nav-item submenu dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
