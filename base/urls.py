@@ -2,6 +2,7 @@ from django.urls import path
 from base import views
 from django.conf.urls.static import static
 from django.conf import settings
+from .views import create
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -13,7 +14,6 @@ urlpatterns = [
     path('blog/', views.blog, name='blog'),
     path('login/', views.login, name='login'),
     path('signup/', views.signup, name='signup'),
-    
     path('chatroom/', views.chatroom, name='chatroom'),
     path('logout/', views.logout, name='logout'),
     path('blogpost/', views.blogpost, name='blogpost'),
@@ -21,5 +21,6 @@ urlpatterns = [
     path('newspost/', views.newspost, name='newspost'),
     path('newspost/<str:slug>/', views.newspost, name="newspost"),
     path('search/', views.search, name='search'),
+    path('create/', create.as_view(), name='create'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

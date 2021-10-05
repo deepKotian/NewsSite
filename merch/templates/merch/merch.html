@@ -2,27 +2,37 @@
 {% load static %}
 {% block merchactive %} {% endblock merchactive %}
 {% block content %}
+
 <section class="blog_area">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 mx-auto">
                 <div class="main_title">
                     <h2>Merch</h2>
                     <h1>Merch</h1>
                 </div>
             </div>
         </div>
-        <div class="row">
-            
-            <div class="col-lg-4 col-md-6">
+        <div class="col-lg-12" style="margin-bottom:50px">
+            <div class="list-group">
+                 {% for cat in allCat %}
+                <a href="/merch/merch/?category={{cat.id}}" class="list-group-item list-group-item-action">{{cat.name}}</a>
+                {% endfor %}
+            </div>
+            </div>
+        <div class="row" >
+
+             
+            {% for merch in allMerch %}
+            <div class="col-lg-4 col-md-8" style="margin-bottom:50px">
                 <div class="blog_items">
                    <div class="blog_img_box">
-                        <img class="img-fluid" src="{% static 'base/img/codm1.jpg' %}" alt="">
+                        <img class="img-fluid" src="{{merch.image.url}}" alt="">
                     </div> 
                     <div class="blog_content">
-                       <center> <a class="title" href="/newspost/{{news.slug}}">{{news.title}}</a></center>
-                        <center><p>Red Shirt</p></center>
-                        <button type="button" class="btn btn-primary">Primary</button>
+                       <center> <a class="title" href="/newspost/{{news.slug}}">{{merch.name}}</a></center>
+                        <center><p>Rs. {{merch.price}}</p></center>
+                        <center><button type="button" class="btn btn-primary">Add To Cart</button></center>
                         {% comment %} <p> ugndnummbf</p>
                         <div class="date">
                             <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>{{news.timeStamp}} </a>
@@ -31,7 +41,7 @@
                     </div>
                 </div>
             </div>
-    
+             {% endfor %}
         </div>
     </div>
 </section>

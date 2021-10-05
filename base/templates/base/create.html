@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+<h1 style="margin-top:120px">Creat a Post</h1>
+<center>
+<form method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button>
+</form>
+</center>
+
+{% endblock content %}

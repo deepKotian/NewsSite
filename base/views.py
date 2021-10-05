@@ -5,6 +5,7 @@ from django.contrib.auth.models import User, auth
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from base.models import Post, News
+from django.views.generic import ListView, DetailView, CreateView
 
 def index(request):
     return render(request , 'index.html')
@@ -41,6 +42,12 @@ def chatroom(request):
 
 def blogpost(request):
     return render(request , 'blogpost.html')
+
+class create(CreateView):
+    model = Post
+    template_name = 'create.html'
+    fields = '__all__'
+   
 
 def blogpost(request, slug):
     post = Post.objects.filter(slug = slug).first()
