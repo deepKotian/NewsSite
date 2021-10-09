@@ -27,15 +27,15 @@
         </div>
         <div class="row">
             {% for post in allPosts %}
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6" style="margin-bottom:50px">
                 <div class="blog_items">
                    {% comment %}  <div class="blog_img_box">
                         <img class="img-fluid" src="{% static 'base/img/blog_img1.png' %}" alt="">
                     </div> {% endcomment %}
                     <div class="blog_content">
                        <center> <a class="title" href="/blogpost/{{post.slug}}">{{post.title}}</a></center>
-                        <p >{{post.author}}</p>
-                        <p>{{post.content| truncatechars:300 }}</p>
+                        <p style="color:#7EC8E3">{{post.author}}</p>
+                        <p>{{post.content| truncatechars:100 | safe  }}</p>
                         <div class="date">
                             <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>{{post.timeStamp}} </a>
                             <a href="/blogpost/{{post.slug}}"><i class="fa fa-comments-o" aria-hidden="true"></i> Continue..</a>

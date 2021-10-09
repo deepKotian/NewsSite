@@ -2,12 +2,15 @@
 {% load static %}
 {% block content %}
 
+
+<img class="img-fluid" src="{{news.image.url}}" alt="">
+
 <div class="container my-3" style="padding-top: 100px">
 <div class="blog-post">
         <h2 class="blog-post-title">{{news.title}}</h2>
         <p class="blog-post-meta">{{news.timeStamp}} by <a href="#">{{news.author}}</a></p>
 
-        <p>{{news.content}}</p>
+        <p>{{news.content| safe}}</p>
         <hr>
 </div>
 </div>
