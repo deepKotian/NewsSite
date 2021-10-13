@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="row" style="margin-top:100px">
+ <center>           
+            <div class="col-lg-4 col-md-8" style="margin-bottom:100px"  >
+                <div class="blog_items">
+                   <div class="blog_img_box">
+                        <img class="img-fluid" src="{{prod.image.url}}" alt="">
+                    </div> 
+                    <div class="blog_content">
+                       <center> <a class="title" >{{prod.name}}</a></center>
+                        <center><p>Rs. {{prod.price}}</p></center>
+                        <a href="/merch/payment/{{merch.slug}}"><center><button type="button" class="btn btn-primary">Buy</button></center></a>
+                        {% comment %} <p> ugndnummbf</p>
+                        <div class="date">
+                            <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>{{news.timeStamp}} </a>
+                            <a href="/newspost/{{news.slug}}"><i class="fa fa-comments-o" aria-hidden="true"></i> Continue..</a>
+                        </div> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+            </center>
+        </div>
+
+
+
+{% endblock content %}

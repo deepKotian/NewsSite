@@ -21,8 +21,6 @@
             </div>
             </div>
         <div class="row" >
-
-             
             {% for merch in allMerch %}
             <div class="col-lg-4 col-md-8" style="margin-bottom:50px">
                 <div class="blog_items">
@@ -30,9 +28,9 @@
                         <img class="img-fluid" src="{{merch.image.url}}" alt="">
                     </div> 
                     <div class="blog_content">
-                       <center> <a class="title" href="/newspost/{{news.slug}}">{{merch.name}}</a></center>
+                       <center> <a class="title" >{{merch.name}}</a></center>
                         <center><p>Rs. {{merch.price}}</p></center>
-                        <center><button type="button" class="btn btn-primary">Add To Cart</button></center>
+                        <a href="/merch/payment/{{merch.slug}}"><center><button type="button" class="btn btn-primary">Add To Cart</button></center></a>
                         {% comment %} <p> ugndnummbf</p>
                         <div class="date">
                             <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>{{news.timeStamp}} </a>

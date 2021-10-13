@@ -5,4 +5,5 @@ from django.conf import settings
 
 urlpatterns = [
     path('merch/', views.merch, name='merch'),
-]
+    path('payment/<str:slug>/', views.payment, name='payment'),
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
