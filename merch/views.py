@@ -2,14 +2,14 @@ from django.shortcuts import render
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from merch.models import Product,Category
-
+import razorpay
 
 def payment(request, slug):
     prod = Product.objects.filter(slug = slug).first()
     print(prod)
     context = {'prod': prod}
     return render(request , 'payment.html', context)
-    
+
 def merch(request):
     allMerch = Product.objects.all()
     allCat = Category.objects.all()

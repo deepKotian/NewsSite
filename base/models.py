@@ -30,4 +30,15 @@ class News(models.Model):
         def __str__(self):
                 return 'News from ' +self.title + ' by ' + self.author
 
+
+class Contact(models.Model):
+        sno = models.AutoField(primary_key=True)
+        name = models.CharField(max_length=255)
+        phone = models.CharField(max_length=12)
+        email = models.CharField(max_length=255)
+        comment = models.CharField(max_length=255)
+        
+        def __str__(self):
+                return 'Feedback from ' +self.name 
+
         

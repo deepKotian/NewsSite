@@ -136,3 +136,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/images/'
 MEDIA_ROOT = BASE_DIR
+
+RAZORPAY_API_KEY = 'rzp_test_yOgTa9YwwHLKDR'
+RAZORPAY_API_SECRET_KEY = 'qDmtqkDq7Rs3OIpFDd7JDtRR'

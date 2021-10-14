@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-from base.models import Post, News
+from base.models import Post, News, Contact
 from django.views.generic import ListView, DetailView, CreateView
 
 def index(request):
@@ -20,7 +20,21 @@ def tournament(request):
     return render(request , 'tournament.html')
 
 def contact(request):
-    return render(request , 'contact.html')
+    if request.method == 'POST':
+        contact =Contact()
+        name = request.POST.get('name')
+        phone = request.POST.get('phone')
+        email = request.POST.get('email')
+        comment = request.POST.get('comment')
+        contact.name = name
+        contact.phone = phone
+        contact.email = email
+        contact.comment = comment
+        return render(request , 'contact.html')
+        """ user = auth.authenticate(name= name, phone=phone, email=email, comment=comment)
+        print(user) """
+    else:
+        return render(request , 'contact.html')
 
 def blog(request):
     allPosts = Post.objects.all()
