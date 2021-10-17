@@ -30,9 +30,8 @@ def contact(request):
         contact.phone = phone
         contact.email = email
         contact.comment = comment
-        return render(request , 'contact.html')
-        """ user = auth.authenticate(name= name, phone=phone, email=email, comment=comment)
-        print(user) """
+        contact.save()
+        return HttpResponse("Thanks")
     else:
         return render(request , 'contact.html')
 
