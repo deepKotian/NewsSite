@@ -34,6 +34,17 @@ class Product(models.Model):
     
    
 
+class Payment(models.Model):
+        sno = models.AutoField(primary_key=True)
+        name = models.CharField(max_length=255)
+        phone = models.CharField(max_length=12)
+        address = models.CharField(max_length=255)
+        status = models.BooleanField(default=False)
+        delivered = models.BooleanField(default=False)
+
+        def __str__(self):
+                return 'Product brought by ' +self.name 
+
 
  
    

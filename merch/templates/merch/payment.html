@@ -3,24 +3,43 @@
 
 {% block content %}
 
-
-<div class="row" style="margin-top:100px">
- <center>           
-            <div class="col-lg-4 col-md-8" style="margin-bottom:100px"  >
-                <div class="blog_items">
-                   <div class="blog_img_box">
-                        <img class="img-fluid" src="{{prod.image.url}}" alt="">
-                    </div> 
+<form method="POST" >
+{% csrf_token %}
+<div class="row col-sm-12 col-md-12" style="margin-top:100px " >
+          
+            <div class="col-lg-12 col-md-12">
+                <div class="blog_items" >
+                   <center><div class="blog_img_box col-lg-12 col-md-12" style="height: 450px; width: 300px">
+                        <img  style="height: 750px, width: 500px" class="img-fluid" src="{{prod.image.url}}" alt="" >
+                    </div></center>
                     <div class="blog_content">
-                       <center> <a class="title" >{{prod.name}}</a></center>
+                       <center> <a class="title" style="color: blue" >{{prod.name}}</a></center>
                         <center><p>Rs. {{prod.price}}</p></center>
-                        <center><button type="button" class="btn btn-primary" id="rzp-button1">Buy</button></center>
-                  
+                        
+                        
+      <center><div class="form-group col-sm-12 col-md-6">
+        <label for="exampleFormControlInput1">Name</label>
+        <input type="Name" class="form-control " id="exampleFormControlInput1" placeholder="Enter Name" name="name">   
+      </div></center>
+    
+     <center> <div class="form-group col-sm-12 col-md-6">
+        <label for="exampleFormControlInput1">Phone no</label>
+        <input type="phone" class="form-control" id="exampleFormControlInput1" placeholder="Enter Phone No" name="phone">
+      </div></center>
+
+      <center><div class="form-group col-sm-12 col-md-6">
+        <label for="exampleFormControlTextarea1">Address</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Enter Address" name="address"></textarea>
+      </div></center>
+     
+      <center><button type="submit" class="btn btn-dark btnsubmit col-sm-5 col-md-2" style="margin-bottom:20px; margin-top:20px" id="one" onclick="show()" >Buy</button> </center>
+      <center><button type="button" class="btn btn-primary col-sm-5 col-md-2" id="rzp-button1" style="margin-bottom:30px" disabled="disabled">Pay</button></center>
+</form>              
+
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script>
 var options = {
     "key": "{{api_key}}", // Enter the Key ID generated from the Dashboard
-    
     "currency": "INR",
     "name": "Acme Corp",
     "description": "Test Transaction",
@@ -34,7 +53,8 @@ var options = {
     "prefill": {
         "name": "Gaurav Kumar",
         "email": "gaurav.kumar@example.com",
-        "contact": "9999999999"
+        "contact": "9999999999",
+        "address": "E-1203 Anmol Fortune" 
     },
     "notes": {
         "address": "Razorpay Corporate Office"
@@ -57,6 +77,11 @@ document.getElementById('rzp-button1').onclick = function(e){
     rzp1.open();
     e.preventDefault();
 }
+
+function show()
+{
+    document.getElementById('rzp-button1').removeAttribute('disabled');
+}
 </script>
                         {% comment %} <p> ugndnummbf</p>
                         <div class="date">
@@ -66,7 +91,7 @@ document.getElementById('rzp-button1').onclick = function(e){
                     </div>
                 </div>
             </div>
-            </center>
+         
         </div>
 
 
