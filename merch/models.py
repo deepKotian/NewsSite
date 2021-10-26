@@ -39,7 +39,9 @@ class Payment(models.Model):
         name = models.CharField(max_length=255)
         phone = models.CharField(max_length=12)
         address = models.CharField(max_length=255)
-        status = models.BooleanField(default=False)
+        mode = models.CharField(max_length=255)
+        size = models.IntegerField(default=32, null=True)
+        payment_status = models.BooleanField(default=False)
         delivered = models.BooleanField(default=False)
 
         def __str__(self):

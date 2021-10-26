@@ -136,12 +136,16 @@
 							Merch Store
 						</a>
 					</li>
+					
 					<li class="nav-item">
+					{% if user.is_authenticated %}
 						<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
 						 aria-selected="false">
 							ChatRoom
 						</a>
+					{% endif %}
 					</li>
+				
 				</ul>
 				<div class="tab-content" id="myTabContent" >
 					<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab" >

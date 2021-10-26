@@ -12,29 +12,33 @@ def payment(request, slug):
         name = request.POST.get('name')
         phone = request.POST.get('phone')
         address = request.POST.get('address')
+        mode = request.POST.get('mode')
+        size = request.POST.get('size')
         payment.name = name
         payment.phone = phone
         payment.address = address
+        payment.mode = mode
+        payment.size = size
         payment.save() 
        
 
-        client = razorpay.Client(auth=("rzp_test_yOgTa9YwwHLKDR", "qDmtqkDq7Rs3OIpFDd7JDtRR"))
-        DATA = {
-        "amount": 10000,
-        "currency": "INR",
-        "receipt": "receipt#1",
+    client = razorpay.Client(auth=("rzp_test_yOgTa9YwwHLKDR", "qDmtqkDq7Rs3OIpFDd7JDtRR"))
+    DATA = {
+    "amount": 60000,
+    "currency": "INR",
+    "receipt": "receipt#1",
+    }
+    payment_order = client.order.create(data=DATA)
+    payment_order_id = payment_order['id']
+    prod = Product.objects.filter(slug = slug).first()
+    print(prod)
+    context = {
+        'prod': prod,
+        'api_key': RAZORPAY_API_KEY,
+        'order_id': payment_order_id,
         }
-        payment_order = client.order.create(data=DATA)
-        payment_order_id = payment_order['id']
-        prod = Product.objects.filter(slug = slug).first()
-        print(prod)
-        context = {
-            'prod': prod,
-            'api_key': RAZORPAY_API_KEY,
-            'order_id': payment_order_id,
-            }
   
-        return render(request , 'payment.html', context)
+    return render(request , 'payment.html', context)
 
 def merch(request):
     allMerch = Product.objects.all()
