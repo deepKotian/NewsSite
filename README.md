@@ -42,25 +42,25 @@ Blog Creation
 <img width="940" height="442" alt="image" src="https://github.com/user-attachments/assets/094cbfb2-181c-4b08-b0a2-885afee6f3f6" /><br>
 
 
-7) Chat room:
+8) Chat room:
 <img width="940" height="442" alt="image" src="https://github.com/user-attachments/assets/6ac70ab8-3517-480d-a84e-36e2b020d13b" /><br>
 
 
-8) Merch Store:
+9) Merch Store:
 <img width="940" height="442" alt="image" src="https://github.com/user-attachments/assets/6d496b4a-163a-493d-b3c1-85814085b32e" />
 
 <img width="940" height="442" alt="image" src="https://github.com/user-attachments/assets/6288f372-ddd6-48c3-a6dd-ef6b2a974ba9" /><br>
 
 
-9) Payment gateway
+10) Payment gateway
 <img width="940" height="440" alt="image" src="https://github.com/user-attachments/assets/6c87be1a-2619-4cce-a9a1-dd5e41909640" /><br>
 
 
-10) About us
+11) About us
 <img width="940" height="442" alt="image" src="https://github.com/user-attachments/assets/24844218-cd66-4d43-9e39-0ba78c8dc364" /><br>
 
 
-11) Contact us
+13) Contact us
 <img width="940" height="440" alt="image" src="https://github.com/user-attachments/assets/a4e0a18d-aa91-45b7-a7f7-36bce36b6e81" /><br>
 
 
