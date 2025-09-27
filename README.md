@@ -1,6 +1,14 @@
 **System Design:**
 
 <img width="940" height="679" alt="image" src="https://github.com/user-attachments/assets/dfb957f8-c802-49c4-ab85-e0e10aee3103" /><br>
+The user will first SignUp if he had previously Signed Up he will use the Login Page, for the new users the details of the new user will be stored in the database for further reference.
+After he has logged in the Home Page will appear where the user will have 5 options in the navbar
+**News:** It will consist of all the latest news related to Gaming.
+**Tournament:** The details of the Ongoing and Upcoming tournaments will be displayed in this page along with the results from the past tournaments
+9
+**Blog:** It will consist of the user blogs given to us by the content creators. The users who have logged in our website are only eligible to view and create the blog page.
+**Chat Room:** A real time chat room to interact with all the other Gamers who are online on the website. Users who have logged in to their accounts will be able to use this feature.
+**Merch:** Store to Buy all our merch as well as other content creator’s merch. <br>
 
 **Project Screenshots:**
 
@@ -28,7 +36,7 @@ After Login
 <img width="940" height="442" alt="image" src="https://github.com/user-attachments/assets/302dee55-61f2-446a-8617-6f4902d5fb9e" /><br>
 
 
-6) Blogs Page :
+7) Blogs Page :
 <img width="940" height="442" alt="image" src="https://github.com/user-attachments/assets/4c814732-0784-4d9f-bc5b-90291db50344" /><br>
 
 Blog Creation
