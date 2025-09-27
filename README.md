@@ -2,7 +2,7 @@
 
 <img width="940" height="679" alt="image" src="https://github.com/user-attachments/assets/dfb957f8-c802-49c4-ab85-e0e10aee3103" /><br>
 The user will first SignUp if he had previously Signed Up he will use the Login Page, for the new users the details of the new user will be stored in the database for further reference.
-After he has logged in the Home Page will appear where the user will have 5 options in the navbar<br>
+After he has logged in the Home Page will appear where the user will have 5 options in the navbar<br><br>
 **News:** It will consist of all the latest news related to Gaming.<br>
 **Tournament:** The details of the Ongoing and Upcoming tournaments will be displayed in this page along with the results from the past tournaments.<br>
 **Blog:** It will consist of the user blogs given to us by the content creators. The users who have logged in our website are only eligible to view and create the blog page.<br>
